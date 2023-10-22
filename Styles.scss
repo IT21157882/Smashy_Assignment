@@ -3,10 +3,23 @@
   box-sizing: border-box;
 }
 
+@keyframes form-enter-animation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 body {
   width: 1366px;
   height: 768px;
   min-height: 100vh;
+  min-width: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +33,9 @@ body {
   height: 768px;
   max-width: 840px;
   padding: 20px;
+ 
 }
+
 
 .error {
   color: red;
@@ -113,6 +128,13 @@ body {
       width: 100%;
     }
 
+    .form-animation {
+      animation: form-enter-animation 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    
+
+
 
     input[type='text'],
     input[type='email']{
@@ -131,7 +153,13 @@ body {
       &.first {
         margin-top: 0;
       }
+
+     
     }
+
+    input::placeholder {
+      color: #dbdbdb; // You can specify the color you want
+  }
 
     input[type='submit'] {
       padding: 10px 40px;

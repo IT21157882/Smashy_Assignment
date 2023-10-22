@@ -2,10 +2,21 @@
   box-sizing: border-box;
 }
 
+@keyframes form-enter-animation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 body {
   width: 1366px;
   height: 768px;
   min-height: 100vh;
+  min-width: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,6 +104,10 @@ body {
   height: 100%;
   width: 100%;
 }
+.signUp .left .form-animation {
+  animation: form-enter-animation 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
 .signUp .left input[type=text],
 .signUp .left input[type=email] {
   width: 65%;
@@ -110,6 +125,12 @@ body {
 .signUp .left input[type=text].first,
 .signUp .left input[type=email].first {
   margin-top: 0;
+}
+.signUp .left input::-moz-placeholder {
+  color: #dbdbdb;
+}
+.signUp .left input::placeholder {
+  color: #dbdbdb;
 }
 .signUp .left input[type=submit] {
   padding: 10px 40px;
