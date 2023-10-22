@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -14,6 +13,16 @@
   }
 }
 
+@keyframes Image-enter-animation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 body {
   width: 1366px;
@@ -23,19 +32,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
-
-
 
 .center {
   width: 1366px;
   height: 768px;
   max-width: 840px;
   padding: 20px;
- 
 }
-
 
 .error {
   color: red;
@@ -46,12 +51,11 @@ body {
 }
 
 .signUp {
- 
   display: flex;
   width: 1366px;
   height: 768px;
   font-size: 14px;
-  font-family: 'Jakarta Sans', sans-serif;
+  font-family: "Jakarta Sans", sans-serif;
   transition: 0.5s ease-in-out;
   border-radius: 5px;
 
@@ -59,17 +63,16 @@ body {
     transform: translate(-25%, 0);
   }
 
-  
- 
-
   .right {
     width: 583px;
-    height: 768px;;
+    height: 768px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
     text-align: center;
+    animation: Image-enter-animation 0.9s ease-in-out;
+    animation-fill-mode: forwards;
     background: {
       image: url("./Images/New.png");
       repeat: none;
@@ -83,8 +86,6 @@ body {
     transform-style: preserve-3d;
     perspective: 1000px;
     overflow: hidden;
-
-    
   }
 
   .left {
@@ -98,25 +99,22 @@ body {
     flex-direction: column;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.35);
 
-      .topic{
-        top: 188px;
-        padding-top: 30px;
-        padding-bottom: 10px;
-        margin-left: 20px;
-        text-align: left;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 200;
-        font-size: 40px;
-        letter-spacing: 0px;
-        color: #05253C;
-        line-height: 52px;
-        opacity: 1;
-      }
+    .topic {
+      top: 188px;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      margin-left: 20px;
+      text-align: left;
+      font-family: "Manrope", sans-serif;
+      font-weight: 200;
+      font-size: 40px;
+      letter-spacing: 0px;
+      color: #05253c;
+      line-height: 52px;
+      opacity: 1;
+    }
 
-
-    
     .image {
-          
       align-items: left;
       margin-left: 20px;
     }
@@ -129,15 +127,12 @@ body {
     }
 
     .form-animation {
-      animation: form-enter-animation 0.5s ease-in-out;
+      animation: form-enter-animation 0.9s ease-in-out;
       animation-fill-mode: forwards;
     }
-    
 
-
-
-    input[type='text'],
-    input[type='email']{
+    input[type="text"],
+    input[type="email"] {
       width: 65%;
       display: block;
       margin: 10px 0;
@@ -145,7 +140,7 @@ body {
       border: none;
       outline: none;
       border-bottom: 1px solid #ebebeb;
-      font-family: 'Jakarats Sans', sans-serif;
+      font-family: "Jakarats Sans", sans-serif;
       font-size: 12px;
       align-items: center;
       margin-left: 20px;
@@ -153,21 +148,19 @@ body {
       &.first {
         margin-top: 0;
       }
-
-     
     }
 
     input::placeholder {
       color: #dbdbdb; // You can specify the color you want
-  }
+    }
 
-    input[type='submit'] {
+    input[type="submit"] {
       padding: 10px 40px;
       border: 2px solid #ffdc47;
       background: #ffdc47;
       color: black;
       transition: 0.15s ease-in-out;
-      font-family: 'Jakarats Sans', sans-serif;
+      font-family: "Jakarats Sans", sans-serif;
       font-size: 16px;
       font-weight: 600;
       border-radius: 5px;
@@ -181,33 +174,26 @@ body {
         background: #ebc210;
         border: 2px solid #ebc210;
         color: black;
-        
-        
       }
     }
-
 
     .input-bordered {
       width: 100%;
       position: relative;
       padding-top: 20px;
-      
 
       .input-label {
         margin-left: 20px;
         font-size: 16px;
         text-align: left;
-        font-family: 'Jakarats Sans', sans-serif;
+        font-family: "Jakarats Sans", sans-serif;
         font-weight: 600;
         letter-spacing: 0px;
         line-height: 28px;
 
-        color: #05253C;
+        color: #05253c;
         opacity: 1;
-        
       }
-
-      
 
       &.active {
         label {
@@ -215,16 +201,14 @@ body {
           left: 0;
           transform: translate(0, -50%) scale(0.75);
           color: #ffdc47;
-          
         }
 
         &:after {
           width: 100%;
-          
         }
 
         &:after {
-          content: '';
+          content: "";
           display: block;
           width: 0;
           height: 1px;
@@ -232,10 +216,7 @@ body {
           position: absolute;
           bottom: 0;
           transition: 0.15s ease-in-out;
-          
         }
-
-       
       }
     }
   }
@@ -250,4 +231,3 @@ body {
     padding: 10px;
   }
 }
-

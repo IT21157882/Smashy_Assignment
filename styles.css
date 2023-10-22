@@ -12,6 +12,16 @@
     opacity: 1;
   }
 }
+@keyframes Image-enter-animation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 body {
   width: 1366px;
   height: 768px;
@@ -58,6 +68,8 @@ body {
   align-items: center;
   z-index: 2;
   text-align: center;
+  animation: Image-enter-animation 0.9s ease-in-out;
+  animation-fill-mode: forwards;
   background-image: url("./Images/New.png");
   background-repeat: none;
   background-size: cover;
@@ -90,7 +102,7 @@ body {
   font-weight: 200;
   font-size: 40px;
   letter-spacing: 0px;
-  color: #05253C;
+  color: #05253c;
   line-height: 52px;
   opacity: 1;
 }
@@ -105,7 +117,7 @@ body {
   width: 100%;
 }
 .signUp .left .form-animation {
-  animation: form-enter-animation 0.5s ease-in-out;
+  animation: form-enter-animation 0.9s ease-in-out;
   animation-fill-mode: forwards;
 }
 .signUp .left input[type=text],
@@ -166,7 +178,7 @@ body {
   font-weight: 600;
   letter-spacing: 0px;
   line-height: 28px;
-  color: #05253C;
+  color: #05253c;
   opacity: 1;
 }
 .signUp .left .input-bordered.active label {
