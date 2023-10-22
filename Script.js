@@ -29,9 +29,9 @@ $(document).ready(function() {
 
 $("form").on('submit', function(e){
 	if (!validateForm()) {
-        e.preventDefault(); // Prevent form submission if validation fails
+        e.preventDefault(); 
     } else {
-        // Validation passed, allow form submission
+   
     }
 
 });
